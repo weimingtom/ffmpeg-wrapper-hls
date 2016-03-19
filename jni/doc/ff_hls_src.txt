@@ -1,0 +1,9 @@
+    av_log(pls->parent, AV_LOG_VERBOSE, "HLS request for url '%s', offset %"PRId64", playlist %d\n",
+           seg->url, seg->url_offset, pls->index);
+
+
+    av_log(pls->parent, AV_LOG_VERBOSE, "HLS request for url '%s', offset %"PRId64", playlist %d, %d, %d, %d, %d\n",
+           seg->url, seg->url_offset, pls->index, pls->cur_seq_no, pls->start_seq_no, pls->cur_seq_no - pls->start_seq_no, pls->n_segments);
+
+
+

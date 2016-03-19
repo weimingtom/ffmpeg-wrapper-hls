@@ -1,0 +1,173 @@
+libavutil/avutil.h
+
+#define AV_TIME_BASE            1000000
+
+--------------------------------
+int64_t duration;
+--------------------------------
+//libavformat/avformat.h
+
+typedef struct AVFormatContext {
+    /**
+     * A class for logging and @ref avoptions. Set by avformat_alloc_context().
+     * Exports (de)muxer private options if they exist.
+     */
+    const AVClass *av_class;
+
+    /**
+     * The input container format.
+     *
+     * Demuxing only, set by avformat_open_input().
+     */
+    struct AVInputFormat *iformat;
+
+    /**
+     * The output container format.
+     *
+     * Muxing only, must be set by the caller before avformat_write_header().
+     */
+    struct AVOutputFormat *oformat;
+
+    /**
+     * Format private data. This is an AVOptions-enabled struct
+     * if and only if iformat/oformat.priv_class is not NULL.
+     *
+     * - muxing: set by avformat_write_header()
+     * - demuxing: set by avformat_open_input()
+     */
+    void *priv_data;
+
+    /**
+     * I/O context.
+     *
+     * - demuxing: either set by the user before avformat_open_input() (then
+     *             the user must close it manually) or set by avformat_open_input().
+     * - muxing: set by the user before avformat_write_header(). The caller must
+     *           take care of closing / freeing the IO context.
+     *
+     * Do NOT set this field if AVFMT_NOFILE flag is set in
+     * iformat/oformat.flags. In such a case, the (de)muxer will handle
+     * I/O in some other way and this field will be NULL.
+     */
+    AVIOContext *pb;
+
+    /* stream info */
+    /**
+     * Flags signalling stream properties. A combination of AVFMTCTX_*.
+     * Set by libavformat.
+     */
+    int ctx_flags;
+
+    /**
+     * Number of elements in AVFormatContext.streams.
+     *
+     * Set by avformat_new_stream(), must not be modified by any other code.
+     */
+    unsigned int nb_streams;
+    /**
+     * A list of all streams in the file. New streams are created with
+     * avformat_new_stream().
+     *
+     * - demuxing: streams are created by libavformat in avformat_open_input().
+     *             If AVFMTCTX_NOHEADER is set in ctx_flags, then new streams may also
+     *             appear in av_read_frame().
+     * - muxing: streams are created by the user before avformat_write_header().
+     *
+     * Freed by libavformat in avformat_free_context().
+     */
+    AVStream **streams;
+
+    /**
+     * input or output filename
+     *
+     * - demuxing: set by avformat_open_input()
+     * - muxing: may be set by the caller before avformat_write_header()
+     */
+    char filename[1024];
+
+    /**
+     * Position of the first frame of the component, in
+     * AV_TIME_BASE fractional seconds. NEVER set this value directly:
+     * It is deduced from the AVStream values.
+     *
+     * Demuxing only, set by libavformat.
+     */
+    int64_t start_time;
+
+    /**
+     * Duration of the stream, in AV_TIME_BASE fractional
+     * seconds. Only set this value if you know none of the individual stream
+     * durations and also do not set any of them. This is deduced from the
+     * AVStream values if not set.
+     *
+     * Demuxing only, set by libavformat.
+     */
+->    int64_t duration;
+
+--------------------------------
+ffmpeg.c
+--------------------------------
+
+    secs = FFABS(pts) / AV_TIME_BASE;
+    us = FFABS(pts) % AV_TIME_BASE;
+    mins = secs / 60;
+    secs %= 60;
+    hours = mins / 60;
+    mins %= 60;
+
+    bitrate = pts && total_size >= 0 ? total_size * 8 / (pts / 1000.0) : -1;
+
+    if (total_size < 0) snprintf(buf + strlen(buf), sizeof(buf) - strlen(buf),
+                                 "size=N/A time=");
+    else                snprintf(buf + strlen(buf), sizeof(buf) - strlen(buf),
+                                 "size=%8.0fkB time=", total_size / 1024.0);
+    if (pts < 0)
+        snprintf(buf + strlen(buf), sizeof(buf) - strlen(buf), "-");
+    snprintf(buf + strlen(buf), sizeof(buf) - strlen(buf),
+             "%02d:%02d:%02d.%02d ", hours, mins, secs,
+             (100 * us) / AV_TIME_BASE);
+
+    if (bitrate < 0) {
+        snprintf(buf + strlen(buf), sizeof(buf) - strlen(buf),"bitrate=N/A");
+        av_bprintf(&buf_script, "bitrate=N/A\n");
+    }else{
+        snprintf(buf + strlen(buf), sizeof(buf) - strlen(buf),"bitrate=%6.1fkbits/s", bitrate);
+        av_bprintf(&buf_script, "bitrate=%6.1fkbits/s\n", bitrate);
+        
+--------------------------------
+libavformat/dump.c
+--------------------------------
+void av_dump_format(AVFormatContext *ic, int index,
+                    const char *url, int is_output)
+{
+    int i;
+    uint8_t *printed = ic->nb_streams ? av_mallocz(ic->nb_streams) : NULL;
+    if (ic->nb_streams && !printed)
+        return;
+
+    av_log(NULL, AV_LOG_INFO, "%s #%d, %s, %s '%s':\n",
+           is_output ? "Output" : "Input",
+           index,
+           is_output ? ic->oformat->name : ic->iformat->name,
+           is_output ? "to" : "from", url);
+    dump_metadata(NULL, ic->metadata, "  ");
+
+    if (!is_output) {
+        av_log(NULL, AV_LOG_INFO, "  Duration: ");
+        if (ic->duration != AV_NOPTS_VALUE) {
+            int hours, mins, secs, us;
+            int64_t duration = ic->duration + (ic->duration <= INT64_MAX - 5000 ? 5000 : 0);
+            secs  = duration / AV_TIME_BASE;
+            us    = duration % AV_TIME_BASE;
+            mins  = secs / 60;
+            secs %= 60;
+            hours = mins / 60;
+            mins %= 60;
+-->            av_log(NULL, AV_LOG_INFO, "%02d:%02d:%02d.%02d", hours, mins, secs,
+                   (100 * us) / AV_TIME_BASE);
+        } else {
+            av_log(NULL, AV_LOG_INFO, "N/A");
+        }
+        
+
+

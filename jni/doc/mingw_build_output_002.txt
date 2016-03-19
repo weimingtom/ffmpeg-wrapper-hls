@@ -1,0 +1,262 @@
+ffmpeg version 2.8.4 Copyright (c) 2000-2015 the FFmpeg developers
+  built with gcc 4.4.3 (GCC) (x86.generic.Komisar)
+  configuration: --disable-yasm --enable-openssl
+  libavutil      54. 31.100 / 54. 31.100
+  libavcodec     56. 60.100 / 56. 60.100
+  libavformat    56. 40.101 / 56. 40.101
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 40.101 /  5. 40.101
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.101 /  1.  2.101
+Splitting the commandline.
+Reading option '-i' ... matched as input file with argument 'https://vms-api.hibiki-radio.jp/api/v1/videos/playlist.m3u8?token=IjCHUJ2QSB3i11OOtDn38GaX4TEqH3mjTDkAuOUVdAg%3D&vms_video_id=663&user_id=-1'.
+Reading option '-vcodec' ... matched as option 'vcodec' (force video codec ('copy' to copy stream)) with argument 'copy'.
+Reading option '-acodec' ... matched as option 'acodec' (force audio codec ('copy' to copy stream)) with argument 'copy'.
+Reading option '-bsf:a' ... matched as option 'bsf' (A comma-separated list of bitstream filters) with argument 'aac_adtstoasc'.
+Reading option 'out.mpeg' ... matched as output file.
+Reading option '-v' ... matched as option 'v' (set logging level) with argument 'debug'.
+Finished splitting the commandline.
+Parsing a group of options: global .
+Applying option v (set logging level) with argument debug.
+Successfully parsed a group of options.
+Parsing a group of options: input file https://vms-api.hibiki-radio.jp/api/v1/videos/playlist.m3u8?token=IjCHUJ2QSB3i11OOtDn38GaX4TEqH3mjTDkAuOUVdAg%3D&vms_video_id=663&user_id=-1.
+Successfully parsed a group of options.
+Opening an input file: https://vms-api.hibiki-radio.jp/api/v1/videos/playlist.m3u8?token=IjCHUJ2QSB3i11OOtDn38GaX4TEqH3mjTDkAuOUVdAg%3D&vms_video_id=663&user_id=-1.
+[https @ 01deb180] request: GET /api/v1/videos/playlist.m3u8?token=IjCHUJ2QSB3i11OOtDn38GaX4TEqH3mjTDkAuOUVdAg%3D&vms_video_id=663&user_id=-1 HTTP/1.1
+User-Agent: Lavf/56.40.101
+Accept: */*
+Range: bytes=0-
+Connection: close
+Host: vms-api.hibiki-radio.jp
+Icy-MetaData: 1
+
+
+[hls,applehttp @ 01dea3e0] Format hls,applehttp probed with size=2048 and score=100
+[http @ 01e19760] request: GET /video/3b3a5f09d21be983f1b4a62807a0f87a/1ec6a25eb9a006d8/ts_audio.m3u8 HTTP/1.1
+User-Agent: Lavf/56.40.101
+Accept: */*
+Connection: close
+Host: d22puzix29w08m.cloudfront.net
+Cookie: _logica-vms_session=VXhVdVdsaUN4V2YzZUUxaEhOTy9ZcS80VFRmRk5MWU9xVWIrUmdhTTdncHAxVEZnMXlPRzdjL0d2NC9xVEVwQ3dpYW0weHdFQ0ZzZWV2SVFnc3dQYmJhNXpwMk5iSGV2UUFOVnF6SG1BMUgxSlVhdVI0RmVDMEZLMityTEJ1VkxveDhCZHBDNVF2TUFFTE4zNkNLT0prOHRBSk5DMyt0b1ZTUFhWaTZYVHhxdGhvUDdlQUxua3dGWmZwRzNsMkdPSlFhY0kyeEtUaE5WNXFnVzBSS1BMZz09LS16YVMyUVU2T0tPbWk2TXM3ZmM1WkRRPT0%3D--460f5a7b013b02bbc18aae6aa45ee6280fe80b07
+Icy-MetaData: 1
+
+
+[AVIOContext @ 01e10a00] Statistics: 17558 bytes read, 0 seeks
+[hls,applehttp @ 01dea3e0] HLS request for url 'http://d22puzix29w08m.cloudfront.net/video/3b3a5f09d21be983f1b4a62807a0f87a/1ec6a25eb9a006d8/ts_audio00000.ts', offset 0, playlist 0, 0, 0, 0, 494
+[https @ 01e10a00] No trailing CRLF found in HTTP header.
+[https @ 01e10a00] request: GET /api/v1/videos/datakey?kid=ssI7KtE5faaLHpkVvXfWBA%3D%3D HTTP/1.1
+User-Agent: Lavf/56.40.101
+Accept: */*
+Connection: close
+Host: vms-api.hibiki-radio.jp
+Cookie: _logica-vms_session=VXhVdVdsaUN4V2YzZUUxaEhOTy9ZcS80VFRmRk5MWU9xVWIrUmdhTTdncHAxVEZnMXlPRzdjL0d2NC9xVEVwQ3dpYW0weHdFQ0ZzZWV2SVFnc3dQYmJhNXpwMk5iSGV2UUFOVnF6SG1BMUgxSlVhdVI0RmVDMEZLMityTEJ1VkxveDhCZHBDNVF2TUFFTE4zNkNLT0prOHRBSk5DMyt0b1ZTUFhWaTZYVHhxdGhvUDdlQUxua3dGWmZwRzNsMkdPSlFhY0kyeEtUaE5WNXFnVzBSS1BMZz09LS16YVMyUVU2T0tPbWk2TXM3ZmM1WkRRPT0%3D--460f5a7b013b02bbc18aae6aa45ee6280fe80b07
+Icy-MetaData: 1
+
+
+
+[http @ 01df71c0] No trailing CRLF found in HTTP header.
+[http @ 01df71c0] request: GET /video/3b3a5f09d21be983f1b4a62807a0f87a/1ec6a25eb9a006d8/ts_audio00000.ts HTTP/1.1
+User-Agent: Lavf/56.40.101
+Accept: */*
+Connection: close
+Host: d22puzix29w08m.cloudfront.net
+Cookie: _logica-vms_session=K05kN0IzRnNMTHVIdS8zdXFibTlSd0lIelpkaVFzNmd1cDEzS21oZjc0L2lEMWczT21VNktCTW9uS2Y0YTVNdXl6TDNpaDB3UjBHNTZDcFdVaHByQ2RRL2NqT09BT1k1TjJpdFFpeWFlNDNWay96VEgrdFlPcU1jV1JuUERhdkJ2SGRlOUwyNGdwTGR3V1ZONHdMNzlTeXpVL3FFQ0w1MjJDbXV0YVd3SWVRWnI4L2pFUkF4ZHovYTZ6T2JWaTF0aUZNR1RmTnN3MW1rNFJHWkZyY09LZz09LS00ZlRSRTJodlZFZUF3Nk4ydFVpNnBRPT0%3D--35fd8d4062e9ca69179d6dccb38de2b8da54c2c6
+Icy-MetaData: 1
+
+
+
+Format mpegts probed with size=2048 and score=100
+[mpegts @ 01e483e0] stream=0 stream_type=f pid=100 prog_reg_desc=
+[mpegts @ 01e483e0] Before avformat_find_stream_info() pos: 0 bytes read:9312 seeks:0
+[aac @ 01e5c600] Warning: not compiled with thread support, using thread emulation
+[mpegts @ 01e483e0] All info found
+[mpegts @ 01e483e0] After avformat_find_stream_info() pos: 3384 bytes read:9312 seeks:0 frames:1
+[hls,applehttp @ 01dea3e0] Before avformat_find_stream_info() pos: 182 bytes read:182 seeks:0
+[aac @ 01dfff60] Warning: not compiled with thread support, using thread emulation
+[hls,applehttp @ 01dea3e0] All info found
+[hls,applehttp @ 01dea3e0] After avformat_find_stream_info() pos: 182 bytes read:182 seeks:0 frames:1
+Input #0, hls,applehttp, from 'https://vms-api.hibiki-radio.jp/api/v1/videos/playlist.m3u8?token=IjCHUJ2QSB3i11OOtDn38GaX4TEqH3mjTDkAuOUVdAg%3D&vms_video_id=663&user_id=-1':
+  Duration: 00:41:07.30, start: 1.400000, bitrate: N/A
+  Program 0 
+    Metadata:
+      variant_bitrate : 107000
+    Stream #0:0, 1, 1/90000: Audio: aac (LC) ([15][0][0][0] / 0x000F), 44100 Hz, stereo, fltp, 91 kb/s
+    Metadata:
+      variant_bitrate : 107000
+Successfully opened the file.
+Parsing a group of options: output file out.mpeg.
+Applying option vcodec (force video codec ('copy' to copy stream)) with argument copy.
+Applying option acodec (force audio codec ('copy' to copy stream)) with argument copy.
+Applying option bsf:a (A comma-separated list of bitstream filters) with argument aac_adtstoasc.
+Successfully parsed a group of options.
+Opening an output file: out.mpeg.
+Successfully opened the file.
+Output #0, mpeg, to 'out.mpeg':
+  Metadata:
+    encoder         : Lavf56.40.101
+    Stream #0:0, 0, 1/90000: Audio: aac ([15][0][0][0] / 0x000F), 44100 Hz, stereo, 91 kb/s
+    Metadata:
+      variant_bitrate : 107000
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Press [q] to stop, [?] for help
+[mpeg @ 01e00ba0] First SCR: 0 First DTS: 45000
+[mpegts @ 01e483e0] first_dts 126000 not matching first dts 144809 (pts 144809, duration 2089) in the queue
+[hls,applehttp @ 01dea3e0] HLS request for url 'http://d22puzix29w08m.cloudfront.net/video/3b3a5f09d21be983f1b4a62807a0f87a/1ec6a25eb9a006d8/ts_audio00001.ts', offset 0, playlist 0, 1, 0, 1, 494
+[http @ 01ddee40] No trailing CRLF found in HTTP header.
+[http @ 01ddee40] request: GET /video/3b3a5f09d21be983f1b4a62807a0f87a/1ec6a25eb9a006d8/ts_audio00001.ts HTTP/1.1
+User-Agent: Lavf/56.40.101
+Accept: */*
+Connection: close
+Host: d22puzix29w08m.cloudfront.net
+Cookie: _logica-vms_session=K05kN0IzRnNMTHVIdS8zdXFibTlSd0lIelpkaVFzNmd1cDEzS21oZjc0L2lEMWczT21VNktCTW9uS2Y0YTVNdXl6TDNpaDB3UjBHNTZDcFdVaHByQ2RRL2NqT09BT1k1TjJpdFFpeWFlNDNWay96VEgrdFlPcU1jV1JuUERhdkJ2SGRlOUwyNGdwTGR3V1ZONHdMNzlTeXpVL3FFQ0w1MjJDbXV0YVd3SWVRWnI4L2pFUkF4ZHovYTZ6T2JWaTF0aUZNR1RmTnN3MW1rNFJHWkZyY09LZz09LS00ZlRSRTJodlZFZUF3Nk4ydFVpNnBRPT0%3D--35fd8d4062e9ca69179d6dccb38de2b8da54c2c6
+Icy-MetaData: 1
+
+
+
+[mpegts @ 01e483e0] Continuity check failed for pid 4096 expected 9 got 0
+[hls,applehttp @ 01dea3e0] HLS request for url 'http://d22puzix29w08m.cloudfront.net/video/3b3a5f09d21be983f1b4a62807a0f87a/1ec6a25eb9a006d8/ts_audio00002.ts', offset 0, playlist 0, 2, 0, 2, 494
+[http @ 01ddee40] No trailing CRLF found in HTTP header.
+[http @ 01ddee40] request: GET /video/3b3a5f09d21be983f1b4a62807a0f87a/1ec6a25eb9a006d8/ts_audio00002.ts HTTP/1.1
+User-Agent: Lavf/56.40.101
+Accept: */*
+Connection: close
+Host: d22puzix29w08m.cloudfront.net
+Cookie: _logica-vms_session=K05kN0IzRnNMTHVIdS8zdXFibTlSd0lIelpkaVFzNmd1cDEzS21oZjc0L2lEMWczT21VNktCTW9uS2Y0YTVNdXl6TDNpaDB3UjBHNTZDcFdVaHByQ2RRL2NqT09BT1k1TjJpdFFpeWFlNDNWay96VEgrdFlPcU1jV1JuUERhdkJ2SGRlOUwyNGdwTGR3V1ZONHdMNzlTeXpVL3FFQ0w1MjJDbXV0YVd3SWVRWnI4L2pFUkF4ZHovYTZ6T2JWaTF0aUZNR1RmTnN3MW1rNFJHWkZyY09LZz09LS00ZlRSRTJodlZFZUF3Nk4ydFVpNnBRPT0%3D--35fd8d4062e9ca69179d6dccb38de2b8da54c2c6
+Icy-MetaData: 1
+
+
+
+[mpegts @ 01e483e0] Continuity check failed for pid 4096 expected 9 got 0
+size=     116kB time=00:00:10.05 bitrate=  94.5kbits/s    [hls,applehttp @ 01dea3e0] HLS request for url 'http://d22puzix29w08m.cloudfront.net/video/3b3a5f09d21be983f1b4a62807a0f87a/1ec6a25eb9a006d8/ts_audio00003.ts', offset 0, playlist 0, 3, 0, 3, 494
+[http @ 01ddee40] No trailing CRLF found in HTTP header.
+[http @ 01ddee40] request: GET /video/3b3a5f09d21be983f1b4a62807a0f87a/1ec6a25eb9a006d8/ts_audio00003.ts HTTP/1.1
+User-Agent: Lavf/56.40.101
+Accept: */*
+Connection: close
+Host: d22puzix29w08m.cloudfront.net
+Cookie: _logica-vms_session=K05kN0IzRnNMTHVIdS8zdXFibTlSd0lIelpkaVFzNmd1cDEzS21oZjc0L2lEMWczT21VNktCTW9uS2Y0YTVNdXl6TDNpaDB3UjBHNTZDcFdVaHByQ2RRL2NqT09BT1k1TjJpdFFpeWFlNDNWay96VEgrdFlPcU1jV1JuUERhdkJ2SGRlOUwyNGdwTGR3V1ZONHdMNzlTeXpVL3FFQ0w1MjJDbXV0YVd3SWVRWnI4L2pFUkF4ZHovYTZ6T2JWaTF0aUZNR1RmTnN3MW1rNFJHWkZyY09LZz09LS00ZlRSRTJodlZFZUF3Nk4ydFVpNnBRPT0%3D--35fd8d4062e9ca69179d6dccb38de2b8da54c2c6
+Icy-MetaData: 1
+
+
+
+[mpegts @ 01e483e0] Continuity check failed for pid 4096 expected 9 got 0
+size=     190kB time=00:00:16.43 bitrate=  94.7kbits/s    [hls,applehttp @ 01dea3e0] HLS request for url 'http://d22puzix29w08m.cloudfront.net/video/3b3a5f09d21be983f1b4a62807a0f87a/1ec6a25eb9a006d8/ts_audio00004.ts', offset 0, playlist 0, 4, 0, 4, 494
+[http @ 01ddee40] No trailing CRLF found in HTTP header.
+[http @ 01ddee40] request: GET /video/3b3a5f09d21be983f1b4a62807a0f87a/1ec6a25eb9a006d8/ts_audio00004.ts HTTP/1.1
+User-Agent: Lavf/56.40.101
+Accept: */*
+Connection: close
+Host: d22puzix29w08m.cloudfront.net
+Cookie: _logica-vms_session=K05kN0IzRnNMTHVIdS8zdXFibTlSd0lIelpkaVFzNmd1cDEzS21oZjc0L2lEMWczT21VNktCTW9uS2Y0YTVNdXl6TDNpaDB3UjBHNTZDcFdVaHByQ2RRL2NqT09BT1k1TjJpdFFpeWFlNDNWay96VEgrdFlPcU1jV1JuUERhdkJ2SGRlOUwyNGdwTGR3V1ZONHdMNzlTeXpVL3FFQ0w1MjJDbXV0YVd3SWVRWnI4L2pFUkF4ZHovYTZ6T2JWaTF0aUZNR1RmTnN3MW1rNFJHWkZyY09LZz09LS00ZlRSRTJodlZFZUF3Nk4ydFVpNnBRPT0%3D--35fd8d4062e9ca69179d6dccb38de2b8da54c2c6
+Icy-MetaData: 1
+
+
+
+[mpegts @ 01e483e0] Continuity check failed for pid 4096 expected 9 got 0
+size=     232kB time=00:00:20.06 bitrate=  94.7kbits/s    size=     236kB time=00:00:20.52 bitrate=  94.2kbits/s    size=     240kB time=00:00:20.75 bitrate=  94.7kbits/s    size=     270kB time=00:00:23.31 bitrate=  94.9kbits/s    [hls,applehttp @ 01dea3e0] HLS request for url 'http://d22puzix29w08m.cloudfront.net/video/3b3a5f09d21be983f1b4a62807a0f87a/1ec6a25eb9a006d8/ts_audio00005.ts', offset 0, playlist 0, 5, 0, 5, 494
+[http @ 01ddee40] No trailing CRLF found in HTTP header.
+[http @ 01ddee40] request: GET /video/3b3a5f09d21be983f1b4a62807a0f87a/1ec6a25eb9a006d8/ts_audio00005.ts HTTP/1.1
+User-Agent: Lavf/56.40.101
+Accept: */*
+Connection: close
+Host: d22puzix29w08m.cloudfront.net
+Cookie: _logica-vms_session=K05kN0IzRnNMTHVIdS8zdXFibTlSd0lIelpkaVFzNmd1cDEzS21oZjc0L2lEMWczT21VNktCTW9uS2Y0YTVNdXl6TDNpaDB3UjBHNTZDcFdVaHByQ2RRL2NqT09BT1k1TjJpdFFpeWFlNDNWay96VEgrdFlPcU1jV1JuUERhdkJ2SGRlOUwyNGdwTGR3V1ZONHdMNzlTeXpVL3FFQ0w1MjJDbXV0YVd3SWVRWnI4L2pFUkF4ZHovYTZ6T2JWaTF0aUZNR1RmTnN3MW1rNFJHWkZyY09LZz09LS00ZlRSRTJodlZFZUF3Nk4ydFVpNnBRPT0%3D--35fd8d4062e9ca69179d6dccb38de2b8da54c2c6
+Icy-MetaData: 1
+
+
+
+[mpegts @ 01e483e0] Continuity check failed for pid 4096 expected 9 got 0
+size=     332kB time=00:00:28.76 bitrate=  94.5kbits/s    [hls,applehttp @ 01dea3e0] HLS request for url 'http://d22puzix29w08m.cloudfront.net/video/3b3a5f09d21be983f1b4a62807a0f87a/1ec6a25eb9a006d8/ts_audio00006.ts', offset 0, playlist 0, 6, 0, 6, 494
+[http @ 01ddee40] No trailing CRLF found in HTTP header.
+[http @ 01ddee40] request: GET /video/3b3a5f09d21be983f1b4a62807a0f87a/1ec6a25eb9a006d8/ts_audio00006.ts HTTP/1.1
+User-Agent: Lavf/56.40.101
+Accept: */*
+Connection: close
+Host: d22puzix29w08m.cloudfront.net
+Cookie: _logica-vms_session=K05kN0IzRnNMTHVIdS8zdXFibTlSd0lIelpkaVFzNmd1cDEzS21oZjc0L2lEMWczT21VNktCTW9uS2Y0YTVNdXl6TDNpaDB3UjBHNTZDcFdVaHByQ2RRL2NqT09BT1k1TjJpdFFpeWFlNDNWay96VEgrdFlPcU1jV1JuUERhdkJ2SGRlOUwyNGdwTGR3V1ZONHdMNzlTeXpVL3FFQ0w1MjJDbXV0YVd3SWVRWnI4L2pFUkF4ZHovYTZ6T2JWaTF0aUZNR1RmTnN3MW1rNFJHWkZyY09LZz09LS00ZlRSRTJodlZFZUF3Nk4ydFVpNnBRPT0%3D--35fd8d4062e9ca69179d6dccb38de2b8da54c2c6
+Icy-MetaData: 1
+
+
+
+[mpegts @ 01e483e0] Continuity check failed for pid 4096 expected 9 got 0
+size=     382kB time=00:00:33.04 bitrate=  94.7kbits/s    size=     386kB time=00:00:33.50 bitrate=  94.4kbits/s    size=     390kB time=00:00:33.73 bitrate=  94.7kbits/s    size=     392kB time=00:00:33.97 bitrate=  94.5kbits/s    [hls,applehttp @ 01dea3e0] HLS request for url 'http://d22puzix29w08m.cloudfront.net/video/3b3a5f09d21be983f1b4a62807a0f87a/1ec6a25eb9a006d8/ts_audio00007.ts', offset 0, playlist 0, 7, 0, 7, 494
+[http @ 01ddee40] No trailing CRLF found in HTTP header.
+[http @ 01ddee40] request: GET /video/3b3a5f09d21be983f1b4a62807a0f87a/1ec6a25eb9a006d8/ts_audio00007.ts HTTP/1.1
+User-Agent: Lavf/56.40.101
+Accept: */*
+Connection: close
+Host: d22puzix29w08m.cloudfront.net
+Cookie: _logica-vms_session=K05kN0IzRnNMTHVIdS8zdXFibTlSd0lIelpkaVFzNmd1cDEzS21oZjc0L2lEMWczT21VNktCTW9uS2Y0YTVNdXl6TDNpaDB3UjBHNTZDcFdVaHByQ2RRL2NqT09BT1k1TjJpdFFpeWFlNDNWay96VEgrdFlPcU1jV1JuUERhdkJ2SGRlOUwyNGdwTGR3V1ZONHdMNzlTeXpVL3FFQ0w1MjJDbXV0YVd3SWVRWnI4L2pFUkF4ZHovYTZ6T2JWaTF0aUZNR1RmTnN3MW1rNFJHWkZyY09LZz09LS00ZlRSRTJodlZFZUF3Nk4ydFVpNnBRPT0%3D--35fd8d4062e9ca69179d6dccb38de2b8da54c2c6
+Icy-MetaData: 1
+
+
+
+[mpegts @ 01e483e0] Continuity check failed for pid 4096 expected 9 got 0
+[hls,applehttp @ 01dea3e0] HLS request for url 'http://d22puzix29w08m.cloudfront.net/video/3b3a5f09d21be983f1b4a62807a0f87a/1ec6a25eb9a006d8/ts_audio00008.ts', offset 0, playlist 0, 8, 0, 8, 494
+[http @ 01ddee40] No trailing CRLF found in HTTP header.
+[http @ 01ddee40] request: GET /video/3b3a5f09d21be983f1b4a62807a0f87a/1ec6a25eb9a006d8/ts_audio00008.ts HTTP/1.1
+User-Agent: Lavf/56.40.101
+Accept: */*
+Connection: close
+Host: d22puzix29w08m.cloudfront.net
+Cookie: _logica-vms_session=K05kN0IzRnNMTHVIdS8zdXFibTlSd0lIelpkaVFzNmd1cDEzS21oZjc0L2lEMWczT21VNktCTW9uS2Y0YTVNdXl6TDNpaDB3UjBHNTZDcFdVaHByQ2RRL2NqT09BT1k1TjJpdFFpeWFlNDNWay96VEgrdFlPcU1jV1JuUERhdkJ2SGRlOUwyNGdwTGR3V1ZONHdMNzlTeXpVL3FFQ0w1MjJDbXV0YVd3SWVRWnI4L2pFUkF4ZHovYTZ6T2JWaTF0aUZNR1RmTnN3MW1rNFJHWkZyY09LZz09LS00ZlRSRTJodlZFZUF3Nk4ydFVpNnBRPT0%3D--35fd8d4062e9ca69179d6dccb38de2b8da54c2c6
+Icy-MetaData: 1
+
+
+
+[mpegts @ 01e483e0] Continuity check failed for pid 4096 expected 9 got 0
+size=     470kB time=00:00:40.72 bitrate=  94.5kbits/s    [hls,applehttp @ 01dea3e0] HLS request for url 'http://d22puzix29w08m.cloudfront.net/video/3b3a5f09d21be983f1b4a62807a0f87a/1ec6a25eb9a006d8/ts_audio00009.ts', offset 0, playlist 0, 9, 0, 9, 494
+[http @ 01ddee40] No trailing CRLF found in HTTP header.
+[http @ 01ddee40] request: GET /video/3b3a5f09d21be983f1b4a62807a0f87a/1ec6a25eb9a006d8/ts_audio00009.ts HTTP/1.1
+User-Agent: Lavf/56.40.101
+Accept: */*
+Connection: close
+Host: d22puzix29w08m.cloudfront.net
+Cookie: _logica-vms_session=K05kN0IzRnNMTHVIdS8zdXFibTlSd0lIelpkaVFzNmd1cDEzS21oZjc0L2lEMWczT21VNktCTW9uS2Y0YTVNdXl6TDNpaDB3UjBHNTZDcFdVaHByQ2RRL2NqT09BT1k1TjJpdFFpeWFlNDNWay96VEgrdFlPcU1jV1JuUERhdkJ2SGRlOUwyNGdwTGR3V1ZONHdMNzlTeXpVL3FFQ0w1MjJDbXV0YVd3SWVRWnI4L2pFUkF4ZHovYTZ6T2JWaTF0aUZNR1RmTnN3MW1rNFJHWkZyY09LZz09LS00ZlRSRTJodlZFZUF3Nk4ydFVpNnBRPT0%3D--35fd8d4062e9ca69179d6dccb38de2b8da54c2c6
+Icy-MetaData: 1
+
+
+
+[mpegts @ 01e483e0] Continuity check failed for pid 4096 expected 9 got 0
+size=     538kB time=00:00:46.67 bitrate=  94.4kbits/s    size=     542kB time=00:00:46.90 bitrate=  94.7kbits/s    [hls,applehttp @ 01dea3e0] HLS request for url 'http://d22puzix29w08m.cloudfront.net/video/3b3a5f09d21be983f1b4a62807a0f87a/1ec6a25eb9a006d8/ts_audio00010.ts', offset 0, playlist 0, 10, 0, 10, 494
+[http @ 01ddee40] No trailing CRLF found in HTTP header.
+[http @ 01ddee40] request: GET /video/3b3a5f09d21be983f1b4a62807a0f87a/1ec6a25eb9a006d8/ts_audio00010.ts HTTP/1.1
+User-Agent: Lavf/56.40.101
+Accept: */*
+Connection: close
+Host: d22puzix29w08m.cloudfront.net
+Cookie: _logica-vms_session=K05kN0IzRnNMTHVIdS8zdXFibTlSd0lIelpkaVFzNmd1cDEzS21oZjc0L2lEMWczT21VNktCTW9uS2Y0YTVNdXl6TDNpaDB3UjBHNTZDcFdVaHByQ2RRL2NqT09BT1k1TjJpdFFpeWFlNDNWay96VEgrdFlPcU1jV1JuUERhdkJ2SGRlOUwyNGdwTGR3V1ZONHdMNzlTeXpVL3FFQ0w1MjJDbXV0YVd3SWVRWnI4L2pFUkF4ZHovYTZ6T2JWaTF0aUZNR1RmTnN3MW1rNFJHWkZyY09LZz09LS00ZlRSRTJodlZFZUF3Nk4ydFVpNnBRPT0%3D--35fd8d4062e9ca69179d6dccb38de2b8da54c2c6
+Icy-MetaData: 1
+
+
+
+[mpegts @ 01e483e0] Continuity check failed for pid 4096 expected 9 got 0
+size=     586kB time=00:00:50.75 bitrate=  94.6kbits/s    [hls,applehttp @ 01dea3e0] HLS request for url 'http://d22puzix29w08m.cloudfront.net/video/3b3a5f09d21be983f1b4a62807a0f87a/1ec6a25eb9a006d8/ts_audio00011.ts', offset 0, playlist 0, 11, 0, 11, 494
+[http @ 01ddee40] No trailing CRLF found in HTTP header.
+[http @ 01ddee40] request: GET /video/3b3a5f09d21be983f1b4a62807a0f87a/1ec6a25eb9a006d8/ts_audio00011.ts HTTP/1.1
+User-Agent: Lavf/56.40.101
+Accept: */*
+Connection: close
+Host: d22puzix29w08m.cloudfront.net
+Cookie: _logica-vms_session=K05kN0IzRnNMTHVIdS8zdXFibTlSd0lIelpkaVFzNmd1cDEzS21oZjc0L2lEMWczT21VNktCTW9uS2Y0YTVNdXl6TDNpaDB3UjBHNTZDcFdVaHByQ2RRL2NqT09BT1k1TjJpdFFpeWFlNDNWay96VEgrdFlPcU1jV1JuUERhdkJ2SGRlOUwyNGdwTGR3V1ZONHdMNzlTeXpVL3FFQ0w1MjJDbXV0YVd3SWVRWnI4L2pFUkF4ZHovYTZ6T2JWaTF0aUZNR1RmTnN3MW1rNFJHWkZyY09LZz09LS00ZlRSRTJodlZFZUF3Nk4ydFVpNnBRPT0%3D--35fd8d4062e9ca69179d6dccb38de2b8da54c2c6
+Icy-MetaData: 1
+
+
+
+[mpegts @ 01e483e0] Continuity check failed for pid 4096 expected 9 got 0
+[hls,applehttp @ 01dea3e0] HLS request for url 'http://d22puzix29w08m.cloudfront.net/video/3b3a5f09d21be983f1b4a62807a0f87a/1ec6a25eb9a006d8/ts_audio00012.ts', offset 0, playlist 0, 12, 0, 12, 494
+[http @ 01ddee40] No trailing CRLF found in HTTP header.
+[http @ 01ddee40] request: GET /video/3b3a5f09d21be983f1b4a62807a0f87a/1ec6a25eb9a006d8/ts_audio00012.ts HTTP/1.1
+User-Agent: Lavf/56.40.101
+Accept: */*
+Connection: close
+Host: d22puzix29w08m.cloudfront.net
+Cookie: _logica-vms_session=K05kN0IzRnNMTHVIdS8zdXFibTlSd0lIelpkaVFzNmd1cDEzS21oZjc0L2lEMWczT21VNktCTW9uS2Y0YTVNdXl6TDNpaDB3UjBHNTZDcFdVaHByQ2RRL2NqT09BT1k1TjJpdFFpeWFlNDNWay96VEgrdFlPcU1jV1JuUERhdkJ2SGRlOUwyNGdwTGR3V1ZONHdMNzlTeXpVL3FFQ0w1MjJDbXV0YVd3SWVRWnI4L2pFUkF4ZHovYTZ6T2JWaTF0aUZNR1RmTnN3MW1rNFJHWkZyY09LZz09LS00ZlRSRTJodlZFZUF3Nk4ydFVpNnBRPT0%3D--35fd8d4062e9ca69179d6dccb38de2b8da54c2c6
+Icy-MetaData: 1
+
+
+
+[mpegts @ 01e483e0] Continuity check failed for pid 4096 expected 9 got 0
+size=     694kB time=00:01:00.04 bitrate=  94.7kbits/s    
+Received windows signal 0

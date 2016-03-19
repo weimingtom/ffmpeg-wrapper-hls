@@ -1,0 +1,26 @@
+// cmdutils.c
+
+->#include "ffmpeg_wrapper.h"
+
+void exit_program(int ret)
+{
+    if (program_exit)
+        program_exit(ret);
+
+->	longjmp(jmp_exit, ret);
+->    // exit(ret);
+}
+
+
+// ffmpeg.c
+
+
+-> int __main(int argc, char **argv)
+{
+
+    if(argc>1 && !strcmp(argv[1], "-d")){
+        run_as_daemon=1;
+->//        av_log_set_callback(log_callback_null);
+        argc--;
+        argv++;
+    }

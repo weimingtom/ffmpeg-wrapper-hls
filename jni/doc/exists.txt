@@ -1,0 +1,20 @@
+File 'out.mp2' already exists. Overwrite ? [y/N]
+
+
+
+------------------
+
+
+static void assert_file_overwrite(const char *filename)
+{
+    if (file_overwrite && no_file_overwrite) {
+        fprintf(stderr, "Error, both -y and -n supplied. Exiting.\n");
+        exit_program(1);
+    }
+
+    if (!file_overwrite) {
+        const char *proto_name = avio_find_protocol_name(filename);
+        if (proto_name && !strcmp(proto_name, "file") && avio_check(filename, 0) == 0) {
+            if (stdin_interaction && !no_file_overwrite) {
+                fprintf(stderr,"File '%s' already exists. Overwrite ? [y/N] ", filename);
+                

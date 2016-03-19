@@ -1,0 +1,26 @@
+D:/workspace_adt_luna/ffmpeg-wrapper-hls//jni/ffmpeg/libavformat/../libavutil/at
+omic_gcc.h:43:5: warning: implicit declaration of function '__atomic_store_n' [-
+Wimplicit-function-declaration]
+D:/workspace_adt_luna/ffmpeg-wrapper-hls//jni/ffmpeg/libavformat/../libavutil/at
+omic_gcc.h:43:32: error: '__ATOMIC_SEQ_CST' undeclared (first use in this functi
+on)
+D:/workspace_adt_luna/ffmpeg-wrapper-hls//jni/ffmpeg/libavformat/../libavutil/at
+omic_gcc.h: In function 'atomic_int_add_and_fetch_gcc':
+D:/workspace_adt_luna/ffmpeg-wrapper-hls//jni/ffmpeg/libavformat/../libavutil/at
+omic_gcc.h:54:5: warning: implicit declaration of function '__atomic_add_fetch'
+[-Wimplicit-function-declaration]
+D:/workspace_adt_luna/ffmpeg-wrapper-hls//jni/ffmpeg/libavformat/../libavutil/at
+omic_gcc.h:54:41: error: '__ATOMIC_SEQ_CST' undeclared (first use in this functi
+on)
+D:/workspace_adt_luna/ffmpeg-wrapper-hls//jni/ffmpeg/libavformat/format.c: In fu
+nction 'av_probe_input_format3':
+D:/workspace_adt_luna/ffmpeg-wrapper-hls//jni/ffmpeg/libavformat/format.c:178:17
+: warning: assignment discards 'const' qualifier from pointer target type [enabl
+ed by default]
+make.exe: *** [D:/workspace_adt_luna/ffmpeg-wrapper-hls//obj/local/armeabi/objs/
+avformat/format.o] Error 1
+make.exe: *** Waiting for unfinished jobs....
+
+
+
+HAVE_ATOMIC_COMPARE_EXCHANGE

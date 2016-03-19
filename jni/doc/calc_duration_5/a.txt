@@ -1,0 +1,125 @@
+ffmpeg version 2.8.4 Copyright (c) 2000-2015 the FFmpeg developers
+  built with gcc 4.4.3 (GCC) (x86.generic.Komisar)
+  configuration: --disable-yasm --enable-openssl
+  libavutil      54. 31.100 / 54. 31.100
+  libavcodec     56. 60.100 / 56. 60.100
+  libavformat    56. 40.101 / 56. 40.101
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 40.101 /  5. 40.101
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.101 /  1.  2.101
+[h264 @ 01c6baa0] Warning: not compiled with thread support, using thread emulation
+[aac @ 01c5b1a0] Warning: not compiled with thread support, using thread emulation
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'input.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 1
+    compatible_brands: isomavc1iso6
+    creation_time   : 2016-01-09 06:16:09
+  Duration: 00:07:50.08, start: 0.000000, bitrate: 1110 kb/s
+    Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p, 1280x720 [SAR 1:1 DAR 16:9], 945 kb/s, 23.98 fps, 23.98 tbr, 24k tbn, 47.95 tbc (default)
+    Metadata:
+      creation_time   : 2016-01-09 06:16:09
+      handler_name    : 264#video:fps=23.976:par=1:1@GPAC0.5.2-DEV-rev228-g7bb2591-master
+    Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 161 kb/s (default)
+    Metadata:
+      creation_time   : 2016-01-09 06:14:44
+      handler_name    : Sound Media Handler
+duration_2===>470080000>>
+[mpeg1video @ 041368c0] Warning: not compiled with thread support, using thread emulation
+[mp2 @ 01c62ac0] Warning: not compiled with thread support, using thread emulation
+[h264 @ 0422d020] Warning: not compiled with thread support, using thread emulation
+[aac @ 04155a20] Warning: not compiled with thread support, using thread emulation
+[mpeg @ 041378e0] VBV buffer size not set, using default size of 130KB
+If you want the mpeg file to be compliant to some specification
+Like DVD, VCD or others, make sure you set the correct buffer size
+Output #0, mpeg, to 'output.mpeg':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 1
+    compatible_brands: isomavc1iso6
+    encoder         : Lavf56.40.101
+    Stream #0:0(und): Video: mpeg1video, yuv420p, 1280x720 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 23.98 fps, 90k tbn, 23.98 tbc (default)
+    Metadata:
+      creation_time   : 2016-01-09 06:16:09
+      handler_name    : 264#video:fps=23.976:par=1:1@GPAC0.5.2-DEV-rev228-g7bb2591-master
+      encoder         : Lavc56.60.100 mpeg1video
+    Stream #0:1(und): Audio: mp2, 48000 Hz, stereo, s16, 384 kb/s (default)
+    Metadata:
+      creation_time   : 2016-01-09 06:14:44
+      handler_name    : Sound Media Handler
+      encoder         : Lavc56.60.100 mp2
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> mpeg1video (native))
+  Stream #0:1 -> #0:1 (aac (native) -> mp2 (native))
+Press [q] to stop, [?] for help
+pts===>1584911, duration_5===>470080000>>
+frame=   40 fps=0.0 q=31.0 size=     316kB time=00:00:01.58 bitrate=1633.3kbits/s    pts===>3445978, duration_5===>470080000>>
+frame=   82 fps= 81 q=31.0 size=     556kB time=00:00:03.44 bitrate=1321.8kbits/s    pts===>5389978, duration_5===>470080000>>
+frame=  123 fps= 81 q=24.8 size=     828kB time=00:00:05.38 bitrate=1258.4kbits/s    pts===>6877978, duration_5===>470080000>>
+frame=  163 fps= 80 q=31.0 size=    1028kB time=00:00:06.87 bitrate=1224.4kbits/s    pts===>8773978, duration_5===>470080000>>
+frame=  204 fps= 80 q=31.0 size=    1260kB time=00:00:08.77 bitrate=1176.4kbits/s    pts===>10597978, duration_5===>470080000>>
+frame=  246 fps= 80 q=31.0 size=    1532kB time=00:00:10.59 bitrate=1184.2kbits/s    pts===>12445978, duration_5===>470080000>>
+frame=  290 fps= 81 q=31.0 size=    1768kB time=00:00:12.44 bitrate=1163.7kbits/s    pts===>14269978, duration_5===>470080000>>
+frame=  340 fps= 84 q=31.0 size=    2036kB time=00:00:14.26 bitrate=1168.8kbits/s    pts===>16573978, duration_5===>470080000>>
+frame=  394 fps= 86 q=31.0 size=    2328kB time=00:00:16.57 bitrate=1150.7kbits/s    pts===>18853978, duration_5===>470080000>>
+frame=  443 fps= 87 q=31.0 size=    2582kB time=00:00:18.85 bitrate=1121.9kbits/s    pts===>20701978, duration_5===>470080000>>
+frame=  485 fps= 87 q=31.0 size=    2820kB time=00:00:20.70 bitrate=1115.9kbits/s    pts===>22525978, duration_5===>470080000>>
+frame=  537 fps= 88 q=31.0 size=    3118kB time=00:00:22.52 bitrate=1133.9kbits/s    pts===>24829978, duration_5===>470080000>>
+frame=  586 fps= 89 q=31.0 size=    3374kB time=00:00:24.82 bitrate=1113.2kbits/s    pts===>26677978, duration_5===>470080000>>
+frame=  634 fps= 89 q=31.0 size=    3724kB time=00:00:26.67 bitrate=1143.5kbits/s    pts===>28525978, duration_5===>470080000>>
+frame=  681 fps= 90 q=24.8 size=    3994kB time=00:00:28.52 bitrate=1147.0kbits/s    pts===>30325978, duration_5===>470080000>>
+frame=  724 fps= 89 q=31.0 size=    4278kB time=00:00:30.32 bitrate=1155.6kbits/s    pts===>32173978, duration_5===>470080000>>
+frame=  766 fps= 89 q=31.0 size=    4564kB time=00:00:32.17 bitrate=1162.1kbits/s    pts===>33541978, duration_5===>470080000>>
+frame=  797 fps= 87 q=24.8 size=    4888kB time=00:00:33.54 bitrate=1193.8kbits/s    pts===>34933978, duration_5===>470080000>>
+frame=  826 fps= 86 q=31.0 size=    5182kB time=00:00:34.93 bitrate=1215.2kbits/s    pts===>36277978, duration_5===>470080000>>
+frame=  863 fps= 85 q=31.0 size=    5530kB time=00:00:36.27 bitrate=1248.7kbits/s    pts===>38125978, duration_5===>470080000>>
+frame=  907 fps= 85 q=31.0 size=    5872kB time=00:00:38.12 bitrate=1261.7kbits/s    pts===>39517978, duration_5===>470080000>>
+frame=  940 fps= 84 q=31.0 size=    6182kB time=00:00:39.51 bitrate=1281.5kbits/s    pts===>40885978, duration_5===>470080000>>
+frame=  976 fps= 84 q=31.0 size=    6458kB time=00:00:40.88 bitrate=1293.9kbits/s    pts===>42709978, duration_5===>470080000>>
+frame= 1020 fps= 84 q=31.0 size=    6784kB time=00:00:42.70 bitrate=1301.2kbits/s    pts===>44557978, duration_5===>470080000>>
+frame= 1064 fps= 84 q=31.0 size=    7128kB time=00:00:44.55 bitrate=1310.5kbits/s    pts===>46405978, duration_5===>470080000>>
+frame= 1101 fps= 84 q=31.0 size=    7424kB time=00:00:46.40 bitrate=1310.6kbits/s    pts===>47773978, duration_5===>470080000>>
+frame= 1142 fps= 83 q=24.8 size=    7762kB time=00:00:47.77 bitrate=1331.0kbits/s    pts===>49597978, duration_5===>470080000>>
+frame= 1182 fps= 83 q=31.0 size=    8058kB time=00:00:49.59 bitrate=1330.9kbits/s    pts===>51445978, duration_5===>470080000>>
+frame= 1231 fps= 84 q=31.0 size=    8314kB time=00:00:51.44 bitrate=1323.9kbits/s    pts===>53749978, duration_5===>470080000>>
+frame= 1280 fps= 84 q=31.0 size=    8610kB time=00:00:53.74 bitrate=1312.2kbits/s    pts===>55093978, duration_5===>470080000>>
+frame= 1313 fps= 84 q=31.0 size=    8974kB time=00:00:55.09 bitrate=1334.4kbits/s    pts===>56485978, duration_5===>470080000>>
+frame= 1346 fps= 83 q=31.0 size=    9266kB time=00:00:56.48 bitrate=1343.8kbits/s    pts===>57853978, duration_5===>470080000>>
+frame= 1385 fps= 83 q=31.0 size=    9538kB time=00:00:57.85 bitrate=1350.6kbits/s    pts===>59701978, duration_5===>470080000>>
+frame= 1426 fps= 83 q=31.0 size=    9838kB time=00:00:59.70 bitrate=1349.9kbits/s    pts===>61525978, duration_5===>470080000>>
+frame= 1469 fps= 83 q=31.0 size=   10146kB time=00:01:01.52 bitrate=1350.9kbits/s    pts===>63349978, duration_5===>470080000>>
+frame= 1515 fps= 83 q=31.0 size=   10406kB time=00:01:03.34 bitrate=1345.6kbits/s    pts===>65221978, duration_5===>470080000>>
+frame= 1561 fps= 83 q=31.0 size=   10706kB time=00:01:05.22 bitrate=1344.7kbits/s    pts===>67021978, duration_5===>470080000>>
+frame= 1603 fps= 83 q=31.0 size=   11002kB time=00:01:07.02 bitrate=1344.8kbits/s    pts===>68869978, duration_5===>470080000>>
+frame= 1644 fps= 83 q=31.0 size=   11266kB time=00:01:08.86 bitrate=1340.1kbits/s    pts===>70261978, duration_5===>470080000>>
+frame= 1679 fps= 83 q=31.0 size=   11564kB time=00:01:10.26 bitrate=1348.3kbits/s    pts===>71605978, duration_5===>470080000>>
+frame= 1709 fps= 82 q=31.0 size=   11898kB time=00:01:11.60 bitrate=1361.2kbits/s    pts===>72997978, duration_5===>470080000>>
+frame= 1741 fps= 82 q=31.0 size=   12168kB time=00:01:12.99 bitrate=1365.5kbits/s    pts===>74845978, duration_5===>470080000>>
+frame= 1787 fps= 82 q=31.0 size=   12408kB time=00:01:14.84 bitrate=1358.1kbits/s    pts===>76669978, duration_5===>470080000>>
+frame= 1834 fps= 82 q=31.0 size=   12740kB time=00:01:16.66 bitrate=1361.2kbits/s    pts===>78949978, duration_5===>470080000>>
+frame= 1887 fps= 83 q=31.0 size=   13038kB time=00:01:18.94 bitrate=1352.8kbits/s    pts===>81253978, duration_5===>470080000>>
+frame= 1940 fps= 83 q=31.0 size=   13296kB time=00:01:21.25 bitrate=1340.5kbits/s    pts===>83533978, duration_5===>470080000>>
+frame= 1995 fps= 84 q=31.0 size=   13598kB time=00:01:23.53 bitrate=1333.5kbits/s    pts===>85837978, duration_5===>470080000>>
+frame= 2048 fps= 84 q=31.0 size=   13854kB time=00:01:25.83 bitrate=1322.2kbits/s    pts===>87709978, duration_5===>470080000>>
+frame= 2100 fps= 85 q=24.8 size=   14170kB time=00:01:27.70 bitrate=1323.5kbits/s    pts===>89509978, duration_5===>470080000>>
+frame= 2140 fps= 85 q=31.0 size=   14482kB time=00:01:29.50 bitrate=1325.4kbits/s    pts===>91381978, duration_5===>470080000>>
+frame= 2188 fps= 85 q=31.0 size=   14762kB time=00:01:31.38 bitrate=1323.3kbits/s    pts===>94093978, duration_5===>470080000>>
+frame= 2246 fps= 85 q=31.0 size=   15064kB time=00:01:34.09 bitrate=1311.5kbits/s    pts===>95941978, duration_5===>470080000>>
+frame= 2297 fps= 86 q=31.0 size=   15316kB time=00:01:35.94 bitrate=1307.8kbits/s    pts===>98245978, duration_5===>470080000>>
+frame= 2348 fps= 86 q=31.0 size=   15642kB time=00:01:38.24 bitrate=1304.3kbits/s    pts===>100093978, duration_5===>470080000>>
+frame= 2397 fps= 86 q=31.0 size=   15936kB time=00:01:40.09 bitrate=1304.3kbits/s    pts===>102349978, duration_5===>470080000>>
+frame= 2445 fps= 86 q=31.0 size=   16292kB time=00:01:42.34 bitrate=1304.0kbits/s    pts===>104197978, duration_5===>470080000>>
+frame= 2492 fps= 86 q=24.8 size=   16610kB time=00:01:44.19 bitrate=1305.9kbits/s    pts===>106021978, duration_5===>470080000>>
+frame= 2540 fps= 87 q=24.8 size=   16906kB time=00:01:46.02 bitrate=1306.3kbits/s    pts===>108325978, duration_5===>470080000>>
+frame= 2592 fps= 87 q=31.0 size=   17172kB time=00:01:48.32 bitrate=1298.6kbits/s    pts===>110605978, duration_5===>470080000>>
+frame= 2645 fps= 87 q=31.0 size=   17460kB time=00:01:50.60 bitrate=1293.2kbits/s    pts===>112453978, duration_5===>470080000>>
+frame= 2693 fps= 87 q=31.0 size=   17796kB time=00:01:52.45 bitrate=1296.4kbits/s    pts===>114757978, duration_5===>470080000>>
+frame= 2744 fps= 87 q=24.8 size=   18080kB time=00:01:54.75 bitrate=1290.6kbits/s    pts===>117037978, duration_5===>470080000>>
+frame= 2796 fps= 88 q=31.0 size=   18330kB time=00:01:57.03 bitrate=1283.0kbits/s    pts===>118861978, duration_5===>470080000>>
+frame= 2844 fps= 88 q=31.0 size=   18640kB time=00:01:58.86 bitrate=1284.7kbits/s    pts===>121165978, duration_5===>470080000>>
+frame= 2895 fps= 88 q=31.0 size=   18896kB time=00:02:01.16 bitrate=1277.6kbits/s    pts===>123061978, duration_5===>470080000>>
+frame= 2947 fps= 88 q=31.0 size=   19140kB time=00:02:03.06 bitrate=1274.1kbits/s    pts===>124861978, duration_5===>470080000>>
+frame= 2991 fps= 88 q=31.0 size=   19422kB time=00:02:04.86 bitrate=1274.2kbits/s    pts===>127141978, duration_5===>470080000>>
+frame= 3038 fps= 88 q=24.8 size=   19684kB time=00:02:07.14 bitrate=1268.3kbits/s    pts===>128989978, duration_5===>470080000>>
+frame= 3083 fps= 88 q=31.0 size=   19908kB time=00:02:08.98 bitrate=1264.3kbits/s    

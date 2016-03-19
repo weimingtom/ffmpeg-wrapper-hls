@@ -1,0 +1,106 @@
+> adb shell
+# mkdir /data/hellowolrd
+# exit
+> adb push ffmpeg /data/helloworld
+> adb shell
+# cd /data/helloworld
+# ls
+# chmod 744 ffmpeg
+# ./ffmpeg
+# exit
+
+===================================
+download hls
+===================================
+
+# ./ffmpeg -i "https://xxx" -vcodec copy -acodec copy -bsf:a aac_adtstoasc out.mp4
+# ./ffmpeg -i "https://xxx" -vcodec copy -acodec copy -bsf:a aac_adtstoasc out.mpeg
+> adb pull /data/helloworld/out.mp4 out.mp4 
+
+===================================
+check hls support
+===================================
+
+root@generic:/data/helloworld # ./ffmpeg -protocols
+./ffmpeg -protocols
+ffmpeg version 2.8.4 Copyright (c) 2000-2015 the FFmpeg developers
+  built with gcc 4.9 (GCC) 20140827 (prerelease)
+  configuration: --arch=arm --target-os=linux --enable-cross-compile --cross-pre
+fix='D:/android-ndk-r10e/toolchains/arm-linux-androideabi-4.9/prebuilt/windows/b
+in/arm-linux-androideabi-' --prefix=../jni/libffmpeg --sysroot='D:/android-ndk-r
+10e/platforms/android-9/arch-arm' --extra-cflags=' -ID:/android-ndk-r10e/platfor
+ms/android-9/arch-arm/usr/include -DANDROID -mthumb ' --extra-ldflags=' -LD:/and
+roid-ndk-r10e/platforms/android-9/arch-arm/usr/lib' --disable-debug --disable-ff
+play --disable-ffprobe --disable-ffserver --enable-avfilter --enable-decoders --
+enable-demuxers --enable-encoders --enable-filters --enable-indevs --enable-netw
+ork --enable-parsers --enable-protocols --enable-swscale --enable-nonfree --enab
+le-thumb --disable-armv5te --disable-armv6 --disable-armv6t2 --disable-vfp --dis
+able-neon --disable-inline-asm --disable-asm --disable-doc --enable-openssl
+  libavutil      54. 31.100 / 54. 31.100
+  libavcodec     56. 60.100 / 56. 60.100
+  libavformat    56. 40.101 / 56. 40.101
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 40.101 /  5. 40.101
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.101 /  1.  2.101
+Supported file protocols:
+Input:
+  async
+  cache
+  concat
+  crypto
+  data
+  ffrtmpcrypt
+  ffrtmphttp
+  file
+  ftp
+  gopher
+  hls
+  http
+  httpproxy
+  https
+  mmsh
+  mmst
+  pipe
+  rtmp
+  rtmpe
+  rtmps
+  rtmpt
+  rtmpte
+  rtmpts
+  rtp
+  srtp
+  subfile
+  tcp
+  tls
+  udp
+  udplite
+  unix
+Output:
+  crypto
+  ffrtmpcrypt
+  ffrtmphttp
+  file
+  ftp
+  gopher
+  http
+  httpproxy
+  https
+  icecast
+  md5
+  pipe
+  rtmp
+  rtmpe
+  rtmps
+  rtmpt
+  rtmpte
+  rtmpts
+  rtp
+  srtp
+  tcp
+  tls
+  udp
+  udplite
+  unix
+root@generic:/data/helloworld #
+

@@ -1,0 +1,30 @@
+This is fork of https://github.com/hyperoslo/ffmpeg-wrapper
+
+=====================================
+
+FFMPEG is one of the most popular video/image processing library. Not only is it optimized for x86, but also for arm and
+mips. Therefore not only does it run on powerful enterprise x86 servers, but also arm/mips based smartphone/tablets,
+both iOS and Android.
+
+This project mainly focus on Android platform.
+
+=====================================
+ What makes this project different
+=====================================
+1. Works as a library, not a single process. There are quite a few of ffmpeg-for-android open source projects in github,
+those project uses ffmpeg as an independent process. 
+
+2. Change the source code as little as possible. FFMPEG is a very dynamic project, which is upgraded very often. I want
+to make sure the changes are very few, so that when it upgrades, I don't need to change too much.
+
+
+=====================================
+ What was changed
+=====================================
+1. main() -> __main()
+
+2. hook log_infrastrucutre to Android's
+
+3. exit() -> longjmp()
+For an Linux app, 'exit on error' is a good enough approach, but not for a library - it would crash the whole process.
+So all the exit is changed to longjmp back to Java layer

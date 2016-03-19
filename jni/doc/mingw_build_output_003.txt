@@ -1,0 +1,70 @@
+[http @ 03520ee0] No trailing CRLF found in HTTP header.
+pts===>7151756,
+[http @ 03520ee0] No trailing CRLF found in HTTP header.
+pts===>12144044,
+[http @ 03520ee0] No trailing CRLF found in HTTP header.
+pts===>15743133,
+[http @ 03520ee0] No trailing CRLF found in HTTP header.
+pts===>20062056,
+pts===>20758656,time=00:00:20.06 bitrate=  94.7kbits/s
+pts===>23777233,time=00:00:20.75 bitrate=  94.7kbits/s
+pts===>24009433,time=00:00:23.77 bitrate=  94.4kbits/s
+[http @ 03520ee0] No trailing CRLF found in HTTP header.
+pts===>27887167,
+[http @ 03520ee0] No trailing CRLF found in HTTP header.
+pts===>31439833,
+[http @ 03520ee0] No trailing CRLF found in HTTP header.
+pts===>36873300,
+[http @ 03520ee0] No trailing CRLF found in HTTP header.
+pts===>41215433,
+pts===>43328444,time=00:00:41.21 bitrate=  94.6kbits/s
+pts===>44489433,time=00:00:43.32 bitrate=  94.5kbits/s
+[http @ 03520ee0] No trailing CRLF found in HTTP header.
+pts===>45046722,
+[http @ 03520ee0] No trailing CRLF found in HTTP header.
+pts===>50294422,
+[http @ 03520ee0] No trailing CRLF found in HTTP header.
+pts===>55054511,
+[http @ 03520ee0] No trailing CRLF found in HTTP header.
+pts===>60046800,
+pts===>62368811,time=00:01:00.04 bitrate=  94.7kbits/s
+[http @ 03520ee0] No trailing CRLF found in HTTP header.
+pts===>65967889,
+[http @ 03520ee0] No trailing CRLF found in HTTP header.
+pts===>70054611,
+[http @ 03520ee0] No trailing CRLF found in HTTP header.
+pts===>75743500,
+[http @ 03520ee0] No trailing CRLF found in HTTP header.
+pts===>81711033,
+[http @ 03520ee0] No trailing CRLF found in HTTP header.
+pts===>85774522,
+[http @ 03520ee0] No trailing CRLF found in HTTP header.
+pts===>91207967,
+[http @ 03520ee0] No trailing CRLF found in HTTP header.
+pts===>95991289,
+[http @ 03520ee0] No trailing CRLF found in HTTP header.
+pts===>100054789,
+[http @ 03520ee0] No trailing CRLF found in HTTP header.
+pts===>105047078,
+pts===>105975878,ime=00:01:45.04 bitrate=  94.7kbits/s
+pts===>108065678,ime=00:01:45.97 bitrate=  94.6kbits/s
+[http @ 03520ee0] No trailing CRLF found in HTTP header.
+pts===>110062589,
+[http @ 03520ee0] No trailing CRLF found in HTTP header.
+pts===>115054889,
+pts===>117864489,ime=00:01:55.05 bitrate=  94.7kbits/s
+[http @ 03520ee0] No trailing CRLF found in HTTP header.
+pts===>120999189,
+[http @ 03520ee0] No trailing CRLF found in HTTP header.
+pts===>125062678,
+[http @ 03520ee0] No trailing CRLF found in HTTP header.
+pts===>130983778,
+[http @ 03520ee0] No trailing CRLF found in HTTP header.
+pts===>135952844,
+[http @ 03520ee0] No trailing CRLF found in HTTP header.
+pts===>140062767,
+[http @ 03520ee0] No trailing CRLF found in HTTP header.
+pts===>145055056,
+size=    1676kB time=00:02:25.05 bitrate=  94.7kbits/s
+
+
